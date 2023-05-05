@@ -1,0 +1,16 @@
+# Check https://ddev.readthedocs.io/en/stable/users/extend/config_yaml/ for a complete list.
+name: kosmos
+type: drupal9
+docroot: web
+php_version: "8.1"
+webserver_type: nginx-fpm
+router_http_port: "80"
+router_https_port: "443"
+mariadb_version: "10.4"
+composer_version: "2"
+# Don't run phpmyadmin service.
+omit_containers: [ dba ]
+# Don't create additional settings files.
+disable_settings_management: true
+# Required for gulp.
+webimage_extra_packages: [ python, build-essential ]
